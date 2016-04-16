@@ -1,0 +1,122 @@
+header.site-header
+  h1 simple look
+
+article.description
+  p Simple-look is a micro css framework build on top standard html tags. Written to provide better project start point.
+  
+section
+  h2 installation
+  pre
+    code.
+      npm i simple-look
+  h3 stylus
+  pre
+    code.
+      @import '~simple-look/register' // stylus with webpack
+
+      @import 'path_to/node_modules/simple-look/register' // manual path to node_modules
+  h3 css
+  pre
+    code.
+      css {
+        in: progress;
+      }
+section
+  h2 behaviours
+  h3 css classes
+
+  h4 colors
+  .wrapper
+    button.sl-primary.raised .sl-primary
+    button.sl-success.raised .sl-success
+    button.sl-info.raised .sl-info
+    button.sl-warning.raised .sl-warning
+    button.sl-danger.raised .sl-danger
+
+  h4 transition
+  .wrapper
+    button.sl-transition.raised .sl-transition
+    
+section
+  h2 section
+  h3 #{'<section> </section>'}
+  .wrapper
+    section
+      h2 section
+      p text text text text text text text
+      h4 test
+      p text text text text text text
+      
+section
+  h2 header
+  h3 #{'<header> </header>'}
+
+  .wrapper
+    header
+      h1 header
+      p sub-header
+
+section
+  h2 button
+  h3 #{'<button> </button>'}
+
+  .wrapper
+    button button
+    button.raised raised-button
+    button.sl-primary.raised primary button
+
+section
+  h2 article (card)
+  h3 #{'<article> </article>'}
+  .wrapper
+    article.card
+      h1 article
+      input
+      button.raised test
+    
+section
+  h2 input
+  h3 #{'<input />'}
+
+  .wrapper
+    input(placeholder='input')
+
+section
+  h2 select
+  h3 #{'<select> </select>'}
+
+  .wrapper
+    select
+      option wow
+      opiton simple
+      option select
+
+section
+  h2 textarea
+  h3 #{'<textarea> </textarea>'}
+
+  .wrapper
+    textarea
+
+section
+  h2 a
+  h3 #{'<a> </a>'}
+
+  .wrapper
+    a(href='https://github.com/simple-look/' target='_blank') simple-look
+    button.raised
+      a link in button
+
+section
+  h2 pre
+  h3 #{'<pre> </pre>'}
+  
+  pre.
+    pre test
+
+section
+  h2 progress
+  h3 #{'<progress> </progress>'}
+
+  .wrapper
+    progress(value="50", max="100") 50%
