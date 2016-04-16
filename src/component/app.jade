@@ -18,9 +18,14 @@ section
   h3 css
   pre
     code.
-      css {
-        in: progress;
-      }
+      link(rel='stylesheet' href='https://npmcdn.com/simple-look/lib/simple-look.css') // cdn
+ 
+      link(rel='stylesheet' href='path_to/node_modules/simple-look/lib/simple-look.css') // npm
+
+  p with webpack
+  pre
+    code.
+      require('simple-look/lib/simple-look.css')
 section
   h2 behaviours
   h3 css classes
