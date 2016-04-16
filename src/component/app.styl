@@ -1,27 +1,46 @@
 @import '~flexstyl/flex'
-@import '~simple-look/register'
+@import '~simple-look/src/core/elements'
 
 :host
   margin 1em 2em
+  flex styl
+  flex column
 
 body
   color #333
 
-h3
-  margin .5em
-  margin-bottom 1em
-
 .description
-  flex styl
+  section()
 
-.wrapper
-  background #eee
-  padding 1em
+.example
+  text-align center
+  div
+    flex styl
+    align center
+    justify around
 
-.card
-  flex line
-  flex column
+section
+  section()
+
+article
+  card()
 
 .site-header
+  header()
   color teal
   text-align center
+
+.comparison
+  flex styl
+  flex wrap
+  align center
+  padding .25em
+  justify around
+  background #fff
+
+  & > *
+    flex grow
+    shadow .3
+    margin .3em
+    padding .2em
+    background #ddd
