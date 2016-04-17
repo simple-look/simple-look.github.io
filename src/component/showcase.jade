@@ -29,10 +29,14 @@ section
 section
   h2 behaviours
   h3 raised
-  p just add raised attribute
+  p just add raised attribute to element
   .wrapper
-    article #{'<article> </article>'}
-    article(raised) #{'<article raised> </article>'}
+    div
+      article #{'<article> </article>'}
+      article(raised) #{'<article raised> </article>'}
+    div
+      input(placeholder='not raised')
+      input(raised placeholder='raised')
       
   h3 css classes
 
