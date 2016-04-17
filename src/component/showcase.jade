@@ -57,7 +57,40 @@ section
     header
       h1 header
       p sub-header
+      
+section
+  h2 lists
+  h3 #{'<ul> </ul>'} / #{'<ol> </ol>'}
 
+  .wrapper
+    p unordered list
+    ul
+      li list item
+      li list item
+      li.raised raised list item
+      li.raised.hint #{'<li class="raised">'}
+      li.raised raised list item
+    
+    p raised unordered list
+    p.hint #{'<ul class="raised">'}
+    ul.raised
+      li list item
+      li list item
+      li list item
+      
+    p ordered list
+    ol
+      li list item
+      li.raised raised list item
+      li list item
+
+    p raised ordered list
+    p.hint #{'<ol class="raised">'}
+    ol.raised
+      li list item
+      li list item
+      li list item
+    
 section
   h2 button
   h3 #{'<button> </button>'}
