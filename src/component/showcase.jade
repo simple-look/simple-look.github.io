@@ -11,14 +11,17 @@ section
       @import 'path_to/node_modules/simple-look/register' // manual path to node_modules
   h3 css
   a(href='http://codepen.io/RasCaDa/pen/QNrvVW' target='_blank') codepen example
+  p cdn
   pre
     code.
-      // cdn
-      link(rel='stylesheet' href='https://npmcdn.com/simple-look/lib/simple-look.css')
+      #{"<link rel='stylesheet' href='https://npmcdn.com/simple-look/lib/simple-look.css'>"}
 
-      // npm
-      link(rel='stylesheet' href='path_to/node_modules/simple-look/lib/simple-look.css')
+  p npm
+  pre
+    code.
+      #{"<link rel='stylesheet' href='path_to/node_modules/simple-look/lib/simple-look.css'>"}
 
+  h3 js 
   p with webpack
   pre
     code.
