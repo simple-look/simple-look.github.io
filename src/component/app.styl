@@ -10,14 +10,24 @@ body
   color #333
 
 .description
+.example
+  raised()
+
+.description
   section()
 
 .example
-  text-align center
   div
     flex styl
     align center
     justify around
+
+    div
+      background #ddd
+      flex styl
+      flex column
+      padding 2em
+
 
 section
   section()
@@ -29,18 +39,3 @@ article
   header()
   color teal
   text-align center
-
-.comparison
-  flex styl
-  flex wrap
-  align center
-  padding .25em
-  justify around
-  background #fff
-
-  & > *
-    flex grow
-    shadow .3
-    margin .3em
-    padding .2em
-    background #ddd
