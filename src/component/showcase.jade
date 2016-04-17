@@ -28,19 +28,25 @@ section
       require('simple-look/lib/simple-look.css')
 section
   h2 behaviours
+  h3 raised
+  p just add raised attribute
+  .wrapper
+    article #{'<article> </article>'}
+    article(raised) #{'<article raised> </article>'}
+      
   h3 css classes
 
   h4 colors
   .wrapper
-    button.sl-primary.raised .sl-primary
-    button.sl-success.raised .sl-success
-    button.sl-info.raised .sl-info
-    button.sl-warning.raised .sl-warning
-    button.sl-danger.raised .sl-danger
+    button(raised).sl-primary .sl-primary
+    button(raised).sl-success .sl-success
+    button(raised).sl-info .sl-info
+    button(raised).sl-warning .sl-warning
+    button(raised).sl-danger .sl-danger
 
   h4 transition
   .wrapper
-    button.sl-transition.raised .sl-transition
+    button(raised).sl-transition .sl-transition
     
 section
   h2 section
@@ -60,58 +66,25 @@ section
     header
       h1 header
       p sub-header
-      
+
 section
-  h2 lists
-  h3 #{'<ul> </ul>'} / #{'<ol> </ol>'}
+  h2 a
+  h3 #{'<a> </a>'}
 
   .wrapper
-    p unordered list
-    ul
-      li list item
-      li list item
-      li.raised raised list item
-      li.raised.hint #{'<li class="raised">'}
-      li.raised raised list item
-    
-    p raised unordered list
-    p.hint #{'<ul class="raised">'}
-    ul.raised
-      li list item
-      li list item
-      li list item
-      
-    p ordered list
-    ol
-      li list item
-      li.raised raised list item
-      li list item
+    a(href='https://github.com/simple-look/' target='_blank') simple-look
+    button(raised).a
+      a link in button
 
-    p raised ordered list
-    p.hint #{'<ol class="raised">'}
-    ol.raised
-      li list item
-      li list item
-      li list item
-    
 section
   h2 button
   h3 #{'<button> </button>'}
 
   .wrapper
     button button
-    button.raised raised-button
-    button.sl-primary.raised primary button
+    button(raised) raised
+    button(raised).sl-primary primary
 
-section
-  h2 article (card)
-  h3 #{'<article> </article>'}
-  .wrapper
-    article.card
-      h1 article
-      input
-      button.raised test
-    
 section
   h2 input
   h3 #{'<input />'}
@@ -137,15 +110,6 @@ section
     textarea
 
 section
-  h2 a
-  h3 #{'<a> </a>'}
-
-  .wrapper
-    a(href='https://github.com/simple-look/' target='_blank') simple-look
-    button.raised
-      a link in button
-
-section
   h2 pre
   h3 #{'<pre> </pre>'}
   
@@ -158,3 +122,45 @@ section
 
   .wrapper
     progress(value="50", max="100") 50%
+    
+section
+  h2 article (card)
+  h3 #{'<article> </article>'}
+  .wrapper
+    article.card
+      h1 article
+      input
+      button(raised) test
+
+section
+  h2 lists
+  h3 #{'<ul> </ul>'} / #{'<ol> </ol>'}
+
+  .wrapper
+    p unordered list
+    ul
+      li list item
+      li list item
+      li(raised) raised list item
+      li(raised).hint #{'<li raised> </li>'}
+      li(raised) raised list item
+    
+    p raised unordered list
+    p.hint #{'<ul raised> </ul>'}
+    ul(raised)
+      li list item
+      li list item
+      li list item
+      
+    p ordered list
+    ol
+      li list item
+      li(raised) raised list item
+      li list item
+
+    p raised ordered list
+    p.hint #{'<ol raised> </ol>'}
+    ol(raised)
+      li list item
+      li list item
+      li list item
