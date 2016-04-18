@@ -1,8 +1,20 @@
-@import '~simple-look/register'
+@import '../../../simple-look/register'
+@import '../../../simple-look/src/core/shadow'
 @import '~flexstyl/flex'
 
 :host
+  wrap 1
   & > *
+    raised()
+
+.articles
+  shadow 0
+  flex styl
+  flex center
+  wrap 1
+  & > *
+    flex styl
+    flex column
     raised()
 
 .card

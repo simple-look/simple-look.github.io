@@ -1,53 +1,142 @@
-section
-  h2 installation
-  pre
-    code.
-      npm i simple-look
-  h3 stylus
-  pre
-    code.
-      @import '~simple-look/register' // with webpack
+.articles
+  article
+    h2 installation
+    pre
+      code.
+        npm i simple-look
+    h3 stylus
+    pre
+      code.
+        @import '~simple-look/register' // with webpack
 
-      @import 'path_to/node_modules/simple-look/register' // manual path to node_modules
-  h3 css
-  a(href='http://codepen.io/RasCaDa/pen/QNrvVW' target='_blank') codepen example
-  p cdn
-  pre
-    code.
-      #{"<link rel='stylesheet' href='https://npmcdn.com/simple-look/lib/simple-look.css'>"}
+        @import 'path_to/node_modules/simple-look/register' // manual path to node_modules
+    h3 css
+    a(href='http://codepen.io/RasCaDa/pen/QNrvVW' target='_blank') codepen example
+    p cdn
+    pre
+      code.
+        #{"<link rel='stylesheet' href='https://npmcdn.com/simple-look/lib/simple-look.css'>"}
 
-  p npm
-  pre
-    code.
-      #{"<link rel='stylesheet' href='path_to/node_modules/simple-look/lib/simple-look.css'>"}
+    p npm
+    pre
+      code.
+        #{"<link rel='stylesheet' href='path_to/node_modules/simple-look/lib/simple-look.css'>"}
 
-  h3 js 
-  p with webpack
-  pre
-    code.
-      require('simple-look/lib/simple-look.css')
-section
-  h2 behaviours
-  h3 raised
-  p just add raised attribute to element
-  .wrapper
-    div
-      article #{'<article> </article>'}
-      article(raised) #{'<article raised> </article>'}
-    div
-      input(placeholder='not raised')
-      input(raised placeholder='raised')
+    h3 js 
+    p with webpack
+    pre
+      code.
+        require('simple-look/lib/simple-look.css')
+  article
+    h2 behaviours
+    h3 raised
+    p just add raised attribute to element
+    .wrapper
+      div
+        article #{'<article> </article>'}
+        article(raised) #{'<article raised> </article>'}
+      div
+        input(placeholder='not raised')
+        input(raised placeholder='raised')
+        
+    h3 css classes
+
+    h4 colors
+    .wrapper
+      button(raised).sl-primary .sl-primary
+      button(raised).sl-success .sl-success
+      button(raised).sl-info .sl-info
+      button(raised).sl-warning .sl-warning
+      button(raised).sl-danger .sl-danger
       
-  h3 css classes
+  article
+    h2 a
+    h3 #{'<a> </a>'}
 
-  h4 colors
-  .wrapper
-    button(raised).sl-primary .sl-primary
-    button(raised).sl-success .sl-success
-    button(raised).sl-info .sl-info
-    button(raised).sl-warning .sl-warning
-    button(raised).sl-danger .sl-danger
+    .wrapper
+      a(href='https://github.com/simple-look/' target='_blank') simple-look
+      button(raised).a
+        a link in button
     
+  article
+    h2 button
+    h3 #{'<button> </button>'}
+
+    .wrapper
+      button button
+      button(raised) raised
+      button(raised).sl-primary primary
+
+  article
+    h2 input
+    h3 #{'<input />'}
+
+    .wrapper
+      input(placeholder='input')
+
+  article
+    h2 select
+    h3 #{'<select> </select>'}
+
+    .wrapper
+      select
+        option wow
+        opiton simple
+        option select
+
+  article
+    h2 textarea
+    h3 #{'<textarea> </textarea>'}
+
+    .wrapper
+      textarea
+
+  article
+    h2 pre
+    h3 #{'<pre> </pre>'}
+    
+    pre.
+      pre test
+
+  article
+    h2 progress
+    h3 #{'<progress> </progress>'}
+
+    .wrapper
+      progress(value="50", max="100") 50%
+      
+  article
+    h2 article (card)
+    h3 #{'<article> </article>'}
+    .wrapper
+      article.card
+        h1 article
+        input(raised placeholder='article')
+        button(raised) article
+      
+section
+  h2 header
+  h3 #{'<header> </header>'}
+
+  .wrapper
+    header
+      h1 header
+      p sub-header
+      
+section
+  h2 nav
+  h3 #{'<nav> </nav>'}
+
+  .wrapper
+    nav
+      -for (var i = 4; i--;)
+        button nav #{i}
+
+    nav(raised)
+      h1 navbar
+      -for (var i = 4; i--;)
+        button nav #{i}
+        
 section
   h2 section
   h3 #{'<section> </section>'}
@@ -58,80 +147,6 @@ section
       h4 test
       p text text text text text text
       
-section
-  h2 header
-  h3 #{'<header> </header>'}
-
-  .wrapper
-    header
-      h1 header
-      p sub-header
-
-section
-  h2 a
-  h3 #{'<a> </a>'}
-
-  .wrapper
-    a(href='https://github.com/simple-look/' target='_blank') simple-look
-    button(raised).a
-      a link in button
-
-section
-  h2 button
-  h3 #{'<button> </button>'}
-
-  .wrapper
-    button button
-    button(raised) raised
-    button(raised).sl-primary primary
-
-section
-  h2 input
-  h3 #{'<input />'}
-
-  .wrapper
-    input(placeholder='input')
-
-section
-  h2 select
-  h3 #{'<select> </select>'}
-
-  .wrapper
-    select
-      option wow
-      opiton simple
-      option select
-
-section
-  h2 textarea
-  h3 #{'<textarea> </textarea>'}
-
-  .wrapper
-    textarea
-
-section
-  h2 pre
-  h3 #{'<pre> </pre>'}
-  
-  pre.
-    pre test
-
-section
-  h2 progress
-  h3 #{'<progress> </progress>'}
-
-  .wrapper
-    progress(value="50", max="100") 50%
-    
-section
-  h2 article (card)
-  h3 #{'<article> </article>'}
-  .wrapper
-    article.card
-      h1 article
-      input
-      button(raised) test
-
 section
   h2 lists
   h3 #{'<ul> </ul>'} / #{'<ol> </ol>'}
